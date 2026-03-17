@@ -8,6 +8,6 @@ services:
     ports:
       - "9004:80"
     restart: unless-stopped
-    container_name: portfolio-app
+    container_name: portfolio-sj
     environment:
       - NODE_ENV=production
