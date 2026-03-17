@@ -13,18 +13,18 @@ function App() {
       <ThemeToggle />
       <NavBar />
       <SectionHome />
-      <h2 id="journey" className="topic">
+      <h2 id="journey" className="topic pt-12">
         Journey
       </h2>
       <SectionJourney />
       <div className="spacer"></div>
-      <h2 id="skills" className="topic">
+      <h2 id="skills" className="topic pt-12">
         Skills
       </h2>
       <SectionCarousel />
       <SectionSkills />
       <div className="spacer"></div>
-      <h2 id="projects" className="topic">
+      <h2 id="projects" className="topic pt-12">
         Projects
       </h2>
       <SectionProjects />

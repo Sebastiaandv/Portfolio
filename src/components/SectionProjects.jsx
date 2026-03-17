@@ -11,6 +11,14 @@ export const SectionProjects = () => {
       githubUrl: "https://github.com/SpastBanana/portfolio",
     },
     {
+      title: "De Vries Educatie",
+      description: "Portfolio website voor Ellard de Vries",
+      image: "/images/dve.png",
+      technologies: ["React", "Node.js", "Tailwindcss"],
+      liveUrl: "https://devrieseducatie.nl",
+      githubUrl: "#",
+    },
+    {
       title: "Sebastiaans Rhythm Studios",
       description: "Mijn muziek bedrijf",
       image: "/images/rhythmstudios.png",
@@ -54,9 +62,7 @@ export const SectionProjects = () => {
                 </div>
 
                 {/* Content container */}
-                <div
-                  className={`w-full max-w-100 md:w-5/12 ml-16 md:ml-0 cards`}
-                >
+                <div className={`w-full max-w-100 md:w-5/12 ml-16 md:ml-0 cards`}>
                   <div className="overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                     {/* Project image */}
                     <div className="relative h-48 overflow-hidden">
@@ -69,12 +75,8 @@ export const SectionProjects = () => {
 
                     {/* Project content */}
                     <div className="p-4">
-                      <h3 className="t2 text-primary-foreground">
-                        {project.title}
-                      </h3>
-                      <p className="t4 text-graytext mb-4 italic">
-                        {project.description}
-                      </p>
+                      <h3 className="t2 text-primary-foreground">{project.title}</h3>
+                      <p className="t4 text-graytext mb-4 italic">{project.description}</p>
 
                       {/* Technologies */}
                       <div className="flex flex-wrap gap-1 mb-2">
@@ -99,9 +101,7 @@ export const SectionProjects = () => {
                           Live Demo
                         </a>
                         <a
-                          href={
-                            project.githubUrl !== "#" ? project.githubUrl : null
-                          }
+                          href={project.githubUrl !== "#" ? project.githubUrl : null}
                           target={project.githubUrl !== "#" ? "_blank" : null}
                           rel="noopener noreferrer"
                           className="flex items-center gap-2 px-2 py-1 border border-gray-600 text-graytext rounded-md hover:border-primary hover:text-primary transition-colors t4"

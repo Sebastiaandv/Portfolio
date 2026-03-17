@@ -7,7 +7,6 @@ export const NavBar = () => {
 
   const NavItems = [
     { name: "Home", href: "#home" },
-    // { name: "About", href: "#about" },
     { name: "Journey", href: "#journey" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
@@ -21,7 +20,7 @@ export const NavBar = () => {
     }
   };
   return (
-    <div className="fixed w-screen h-16 flex items-center justify-center bg-background z-20">
+    <div className="fixed w-screen h-16 flex items-center justify-center bg-transparent z-20">
       <div className="w-4/5 flex items-center justify-between">
         <h1 className="font-bold text-base text-glow">
           <span className="text-primary-foreground">Sebastiaans </span>
@@ -36,10 +35,7 @@ export const NavBar = () => {
           ))}
         </nav>
         {/* Mobile */}
-        <button
-          onClick={toggleMenu}
-          className="fixed top-5 right-5 z-50 md:hidden cursor-pointer"
-        >
+        <button onClick={toggleMenu} className="fixed top-5 right-5 z-50 md:hidden cursor-pointer">
           {isMenuOpen ? <X /> : <Menu />}
         </button>
 
@@ -47,16 +43,12 @@ export const NavBar = () => {
           className={cn(
             "fixed top-0 left-0 bottom-0 right-0 z-45 md:hidden bg-background",
             isMenuOpen ? "flex" : "hidden",
-            "align-center justify-center gap-5 flex-col"
+            "align-center justify-center gap-5 flex-col",
           )}
         >
           <div className="w-auto h-1/3 flex items-center justify-between flex-col z-40">
             {NavItems.map((item, key) => (
-              <a
-                onClick={() => setIsMenuOpen(false)}
-                key={key}
-                href={item.href}
-              >
+              <a onClick={() => setIsMenuOpen(false)} key={key} href={item.href}>
                 {item.name}
               </a>
             ))}
